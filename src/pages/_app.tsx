@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className=" fixed top-0 w-full">
         <Header />
       </div>
+      {/* headerの高さ分marginで余白 */}
       <div className="mt-[68px] bg-gray-50 min-h-screen">
         <Component {...pageProps} />
       </div>

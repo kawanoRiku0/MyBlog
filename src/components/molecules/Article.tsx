@@ -9,6 +9,7 @@ type Props = {
 const noImage = "/images/no-image.jpg";
 
 const Article: FC<Props> = ({ article }) => {
+  // タイトルを35文字いないにトリム
   const trimTitle = useCallback((title: string) => {
     let trimedTitle = title;
 

@@ -53,6 +53,7 @@ export default function Index({ article, error }: Props) {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   try {
     const id = ctx.params?.id;
+    // idが配列で渡ってきた場合は、最初のidを使用
     const idExceptArray = id instanceof Array ? id[0] : id;
     const data = await client.get({
       endpoint: "articles",
