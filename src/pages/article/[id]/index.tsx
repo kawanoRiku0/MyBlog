@@ -21,15 +21,17 @@ export default function Index({ article }: Props) {
         />
         <div className="mt-10">
           <div className=" space-y-6">
-            <div className=" text-blue-700 font-bold text-xl">
+            <h2 className=" text-blue-700 font-bold text-xl md:text-3xl">
               {article.title}
-            </div>
-            <div className=" text-gray-800 text-base">{article.body}</div>
+            </h2>
             <div>
-              <span className=" bg-red-500 text-white  rounded-full px-4 py-2">
+              <span className=" bg-red-500 text-white  rounded-full px-6 py-2">
                 {article.tag || "日常"}
               </span>
             </div>
+            <p className=" text-gray-800 text-base md:text-lg">
+              {article.body}
+            </p>
           </div>
         </div>
       </div>
