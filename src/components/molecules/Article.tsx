@@ -29,9 +29,9 @@ const Article: FC<Props> = ({ article }) => {
             className="w-full max-h-44 sm:max-h-48  md:max-h-36 xl:max-h-52 object-cover"
           />
           <div className="px-5 mt-4 pt-2">
-            <div className="font-bold text-md mb-6">
+            <h2 className="font-bold text-lg mb-6 md:text-xl">
               {article.title ? trimTitle(article.title) : "記事タイトル"}
-            </div>
+            </h2>
             <div className="mb-4 ">
               <span className=" bg-gray-300  rounded-full px-4 py-1">
                 {article.tag || "日常"}
