@@ -5,8 +5,12 @@ import Header from "components/layouts/Header";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
+      <div className=" fixed top-0 w-full">
+        <Header />
+      </div>
+      <div className="mt-[68px] bg-gray-50 min-h-screen">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
