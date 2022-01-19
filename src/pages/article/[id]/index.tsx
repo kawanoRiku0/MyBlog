@@ -17,7 +17,7 @@ export default function Index({ article }: Props) {
         <img
           src={article.eye_catch?.url || noImage}
           alt="アイキャッチ画像"
-          className=" rounded-md w-full max-h-[25rem] object-cover"
+          className=" rounded-md w-full max-h-[25rem] object-cover aspect-video"
         />
         <div className="mt-10">
           <div className=" space-y-6">

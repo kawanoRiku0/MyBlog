@@ -10,7 +10,7 @@ export default function Home({ articles }: Props) {
   return (
     <>
       <h1 className=" font-bold mx-auto container text-2xl p-5 ">記事一覧</h1>
-      <div className="container p-4 flex flex-wrap justify-between mx-auto after:content-[''] after:block after:w-[29%] after:m-3">
+      <div className="p-4 flex flex-wrap  max-w-5xl justify-between mx-auto after:content-[''] after:block after:w-[29%] after:m-3">
         {articles.map((article) => {
           return <Article key={article.id} article={article} />;
         })}

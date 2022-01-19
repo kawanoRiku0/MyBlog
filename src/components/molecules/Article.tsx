@@ -13,7 +13,7 @@ const Article: FC<Props> = ({ article }) => {
     let trimedTitle = title;
 
     if (title.length > 40) {
-      trimedTitle = title.substring(0, 40) + "...";
+      trimedTitle = title.substring(0, 35) + "...";
     }
 
     return trimedTitle;
@@ -26,14 +26,14 @@ const Article: FC<Props> = ({ article }) => {
           <img
             src={article.eye_catch?.url || noImage}
             alt="アイコン画像"
-            className="w-full max-h-44 sm:max-h-48  md:max-h-36 xl:max-h-52 object-cover"
+            className="w-full object-cover aspect-video"
           />
           <div className="px-5 mt-4 pt-2">
-            <h2 className="font-bold text-lg mb-6 md:text-xl">
+            <h2 className="font-bold mb-6 text-base">
               {article.title ? trimTitle(article.title) : "記事タイトル"}
             </h2>
-            <div className="mb-4 ">
-              <span className=" bg-gray-300  rounded-full px-4 py-1">
+            <div className="mb-4">
+              <span className=" bg-gray-300  rounded-full px-4 text-sm py-1">
                 {article.tag || "日常"}
               </span>
             </div>
